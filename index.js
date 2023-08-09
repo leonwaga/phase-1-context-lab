@@ -4,7 +4,7 @@ const createEmployeeRecord = function(array) {
         firstName: `${array[0]}`,
         familyName: `${array[1]}`,
         title: `${array[2]}`,
-        payPerHour: `${array[3]}`,
+        payPerHour: array[3],
         timeInEvents: [],
         timeOutEvents: []
 
@@ -22,7 +22,7 @@ function createEmployeeRecords(data) {
 
 function createTimeInEvent(date) {
 
-    const timeStamp = date.split("")
+    const timeStamp = date.split(" ")
 
     const timeInObj = {
         type:"TimeIn",
